@@ -47,6 +47,11 @@ background-color: rgb(0, 255, 26);
     font-family: cursive;
 }
 
+hr {
+    width: 90%;
+    margin-right: 100px;
+  }
+  
 @media screen and (max-width:767px) {
     .container{
         background-color: rgb(232, 236, 238);

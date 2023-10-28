@@ -7,6 +7,7 @@ const TodoList = () => {
   const [dueDate, setDueDate] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredTasks, setFilteredTasks] = useState([]);
+ // const [filterDate, setFilterDate] = useState("");
 
   useEffect(() => {
     const storedTasks = localStorage.getItem('tasks');
@@ -50,6 +51,14 @@ const TodoList = () => {
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
   };
 
+  // const datefilter   = tasks.filter((tasks) => {
+  //   if (filterDate === "") {
+  //     return true; // Afficher toutes les tâches si aucun filtre n'est appliqué
+  //   } else {
+  //     return tasks.date === filterDate; // Afficher uniquement les tâches avec la même date que le filtre
+  //   }
+  // })
+  
   return (
     <div className='container'>
       <h1 className='title'>React To-Do List</h1>
@@ -61,7 +70,6 @@ const TodoList = () => {
           placeholder="Tâche"
           onChange={e => setDescription(e.target.value)}
         /> <br />
-
         <input className='input'
           type="text"
           value={newTask}
@@ -87,14 +95,14 @@ const TodoList = () => {
 
       <ul className='list'>
         {filteredTasks.map(task => (
-          <li key={task.id}>
+          <li className='li' key={task.id}> 
             <div className='flex'>
               <strong> {task.description}</strong>/{task.taskName}/{task.dueDate}
               <button className='btn-sup' onClick={() => deleteTask(task.id)}>Supprimer</button>
               {/* Ajoutez le code ici pour la modification de la tâche */}
             
             </div>
-          
+          <hr />
           </li>
         ))}
       </ul>
