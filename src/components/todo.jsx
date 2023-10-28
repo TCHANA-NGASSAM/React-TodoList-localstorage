@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import '../style/todo.css'
 const TodoList = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
@@ -51,50 +51,50 @@ const TodoList = () => {
   };
 
   return (
-    <div>
-      <h1>To-Do List</h1>
+    <div className='container'>
+      <h1 className='title'>React To-Do List</h1>
 
       <div>
-      <input
+      <input className='input'
           type="text"
           value={description}
           placeholder="Tâche"
           onChange={e => setDescription(e.target.value)}
-        />
+        /> <br />
 
-        <input
+        <input className='input'
           type="text"
           value={newTask}
           placeholder=" Description"
           onChange={e => setNewTask(e.target.value)}
-        />
+        /> <br />
        
-        <input
+        <input className='input'
           type="date"
           value={dueDate}
           onChange={e => setDueDate(e.target.value)}
-        />
-        <button onClick={addTask}>Ajouter</button>
+        /> <br />
+        <button  className='btn-add' onClick={addTask}>AJOUTER VOTRE TACHE</button>
       </div>
 
       <div>
-        <input
+        <input className='input'
           type="text"
           placeholder="Recherche"
           onChange={e => setSearchTerm(e.target.value)}
         />
       </div>
 
-      <ul>
+      <ul className='list'>
         {filteredTasks.map(task => (
           <li key={task.id}>
-            <div>
-              <strong> {task.description}</strong> - {task.taskName} - {task.dueDate}
-            </div>
-            <div>
-              <button onClick={() => deleteTask(task.id)}>Supprimer</button>
+            <div className='flex'>
+              <strong> {task.description}</strong>/{task.taskName}/{task.dueDate}
+              <button className='btn-sup' onClick={() => deleteTask(task.id)}>Supprimer</button>
               {/* Ajoutez le code ici pour la modification de la tâche */}
+            
             </div>
+          
           </li>
         ))}
       </ul>
