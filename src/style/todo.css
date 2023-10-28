@@ -46,3 +46,15 @@ background-color: rgb(0, 255, 26);
     padding: 3px 3px 3px 3px;
     font-family: cursive;
 }
+
+@media screen and (max-width:767px) {
+    .container{
+        background-color: rgb(232, 236, 238);
+        width: 35%;
+        border-radius: 10px;
+        padding-bottom: 8px;
+        padding-left: 20px;
+        margin: 5% 0px 0px 1%;
+        font-family: cursive;
+    }
+}
