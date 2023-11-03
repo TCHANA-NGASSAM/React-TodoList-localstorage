@@ -47,7 +47,6 @@ const TodoList = () => {
     const updatedTasks = tasks.filter(task => task.id !== id);
     setTasks(updatedTasks);
 
-    // Sauvegarde des tâches dans le localStorage
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
   };
 
@@ -99,7 +98,7 @@ const TodoList = () => {
             <div className='flex'>
               <strong> {task.description}</strong>/{task.taskName}/{task.dueDate}
               <button className='btn-sup' onClick={() => deleteTask(task.id)}>Supprimer</button>
-              {/* Ajoutez le code ici pour la modification de la tâche */}
+              
             
             </div>
           <hr />
