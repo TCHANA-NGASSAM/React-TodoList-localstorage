@@ -7,6 +7,27 @@
     margin: 5% 0px 0px 35%;
     font-family: cursive;
 }
+.btn-ad{
+    border: none;
+    margin: 2px 0px 6px 15px;
+    width: 90%;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    font-family: cursive;
+    background-color: rgb(96, 121, 121); 
+}
+.btn-modif{
+    background-color: rgb(96, 121, 121); 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0px 0px 0px 20px;
+    color: white;
+    padding: 5px;
+    font-family: cursive;
+}
 .title{
     padding: 10px;
     text-align: center;
@@ -50,6 +71,26 @@ background-color: rgb(0, 255, 26);
 hr {
     width: 90%;
     margin-right: 100px;
+  }
+
+  .btn-date{
+    background-color: rgb(25, 214, 25);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0px 0px 0px 6px;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    font-family: cursive;
+  }
+  .inputDateFilter{
+    padding: 10px 0px 10px 5px;
+    margin: 5px 0px 10px 15px;
+    width: 68%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-family: cursive;
   }
   
 @media screen and (max-width:767px) {
