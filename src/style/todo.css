@@ -103,4 +103,13 @@ hr {
         margin: 5% 0px 0px 1%;
         font-family: cursive;
     }
+    .btn-modif{
+        margin: 0px 0px 0px 2px;
+        
+    }
+    .btn-sup{
+ 
+        margin: 0px 0px 0px 3px;
+       
+    }
 }
